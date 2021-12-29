@@ -11,6 +11,16 @@ const App = () => {
   const [activeArticle, setActiveArticle] = useState(0);
   const [newsArticles, setNewsArticles] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
+  const styleObj = {
+    fontSize: 35,
+    
+    color: "#4a54f1",
+    
+    textAlign: "center",
+    
+    paddingTop: "100px",
+    
+    }
 
   const classes = useStyles();
 
@@ -51,7 +61,9 @@ const App = () => {
             <div className={classes.card}><Typography variant="h5" component="h2">Try saying: <br /><br />Go back</Typography></div>
           </div>
         ) : null}
-        <img src="https://images.app.goo.gl/acQ9Ykp4tfh4bF9JA" className={classes.alanLogo} alt="logo" />
+      
+
+<p style={styleObj}><b>Voice Controlled React News Application </b></p>
       </div>
       <NewsCards articles={newsArticles} activeArticle={activeArticle} />
       <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
